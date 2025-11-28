@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "Haru",
+    "gender": "male",
+    "birth": "2025-01-05",
+    "status": "volné",
+    "image": "img/puppies/haru.jpg",
+    "description": "Aktivní pejsek se zvědavou povahou."
+  },
+  {
+    "id": 2,
+    "name": "Yuki",
+    "gender": "female",
+    "birth": "2025-01-05",
+    "status": "rezervované",
+    "image": "img/puppies/yuki.jpg",
+    "description": "Velmi přítulná fenka, vhodná do rodiny."
+  }
+]

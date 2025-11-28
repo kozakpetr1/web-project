@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Chovatelská stanice pejsků</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['system-ui', 'Segoe UI', 'sans-serif'],
+          },
+          colors: {
+            kennel: {
+              light: '#FEF3C7',
+              DEFAULT: '#FBBF24',
+              dark: '#B45309',
+            },
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+  <div class="min-h-screen flex flex-col">
+
+    <!-- HLAVIČKA -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-20">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        <!-- Logo / název -->
+        <div class="flex items-center gap-2">
+          <div class="w-9 h-9 rounded-full bg-kennel flex items-center justify-center">
+            <span class="text-xl">🐾</span>
+          </div>
+          <div class="leading-tight">
+            <div class="text-xs uppercase tracking-wide text-slate-500">Chovatelská stanice</div>
+            <div class="font-semibold text-sm sm:text-base text-slate-900">Zlatý čumáček</div>
+          </div>
+        </div>
+
+        <!-- Navigace (one-page odkazy) -->
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <a href="#uvod" class="text-slate-700 hover:text-slate-950 transition-colors">Úvod</a>
+          <a href="#o-nas" class="text-slate-700 hover:text-slate-950 transition-colors">O nás</a>
+          <a href="#psi" class="text-slate-700 hover:text-slate-950 transition-colors">Naši psi</a>
+          <a href="#obsah" class="text-slate-700 hover:text-slate-950 transition-colors">Obsah</a>
+          <a href="#kontakt" class="text-slate-700 hover:text-slate-950 transition-colors">Kontakt</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- OBSAH -->
+    <main class="flex-1">
+
+      <!-- ÚVOD / HERO -->
+      <section id="uvod" class="relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-br from-kennel-light via-white to-slate-100"></div>
+        <div class="absolute -right-32 -bottom-40 w-80 h-80 rounded-full bg-kennel/20 blur-3xl"></div>
+
+        <div class="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-14 md:py-16">
+          <div class="grid md:grid-cols-2 gap-10 items-center">
+
+            <!-- Text -->
+            <div class="space-y-5">
+              <span class="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-xs font-semibold border border-yellow-100">
+                <span class="text-kennel-dark uppercase tracking-wide">Rodinný chov</span>
+                <span class="text-slate-600 normal-case">Štěňata z lásky, ne z továrny</span>
+              </span>
+
+              <h1 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 leading-tight">
+                Chovatelská stanice pejsků
+                <span class="block text-kennel-dark">Zlatý čumáček</span>
+              </h1>
+
+              <p class="text-sm sm:text-base text-slate-700 max-w-xl">
+                Malá rodinná chovatelská stanice zaměřená na zdraví, povahu a
+                socializaci. Štěňata vyrůstají v domácím prostředí a odcházejí
+                do nových rodin připravená na život s lidmi.
+              </p>
+
+              <div class="flex flex-wrap gap-3">
+                <a href="#psi" class="inline-flex items-center gap-2 rounded-full bg-kennel-dark text-slate-900 px-5 py-2.5 text-sm font-semibold shadow-sm hover:bg-kennel transition-colors">
+                  Naši psi
+                </a>
+                <a href="#kontakt" class="inline-flex items-center gap-2 rounded-full border border-slate-300 bg-white text-slate-800 px-5 py-2.5 text-sm font-semibold hover:bg-slate-50">
+                  Kontaktujte nás
+                </a>
+              </div>
+            </div>
+
+            <!-- Obrázek / vizuál -->
+            <div class="relative">
+              <div class="aspect-[4/3] rounded-3xl overflow-hidden shadow-lg border border-slate-200 bg-white flex items-center justify-center">
+                <!-- Zástupný obrázek nebo plocha – nahradíš vlastním -->
+                <span class="text-6xl">🐕</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- O NÁS -->
+      <section id="o-nas" class="py-10 sm:py-14 md:py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">O nás</h2>
+          <p class="text-sm sm:text-base text-slate-700">
+            Jsme malá chovatelská stanice pejsků, kde jsou psi plnohodnotnými členy rodiny.
+            Věnujeme se chovu s důrazem na zdraví, vyrovnanou povahu a dobrou socializaci.
+          </p>
+          <p class="text-sm sm:text-base text-slate-700">
+            Štěňata vyrůstají v domácím prostředí, jsou zvyklá na běžný ruch domácnosti,
+            děti i další psy. Novým majitelům nabízíme podporu a poradenství po celý život
+            pejska.
+          </p>
+        </div>
+      </section>
+
+      <!-- NAŠI PSI -->
+      <section id="psi" class="py-10 sm:py-14 md:py-16 bg-slate-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="mb-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Naši psi</h2>
+            <p class="text-sm sm:text-base text-slate-700">
+              Zde můžete představit chovné psy a feny, případně rodinné mazlíčky.
+            </p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Pes 1 -->
+            <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+              <div class="aspect-[4/3] bg-slate-200 flex items-center justify-center">
+                <span class="text-4xl">🐶</span>
+              </div>
+              <div class="p-4 space-y-1 text-sm">
+                <h3 class="font-semibold text-slate-900">Jméno psa</h3>
+                <p class="text-xs uppercase tracking-wide text-slate-500">chovný pes</p>
+                <p class="text-slate-700">
+                  Krátký popis povahy, zdravotní výsledky a případné pracovní či výstavní úspěchy.
+                </p>
+              </div>
+            </article>
+
+            <!-- Pes 2 -->
+            <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+              <div class="aspect-[4/3] bg-slate-200 flex items-center justify-center">
+                <span class="text-4xl">🐕‍🦺</span>
+              </div>
+              <div class="p-4 space-y-1 text-sm">
+                <h3 class="font-semibold text-slate-900">Jméno feny</h3>
+                <p class="text-xs uppercase tracking-wide text-slate-500">chovná fena</p>
+                <p class="text-slate-700">
+                  Krátký popis feny, její povaha, zdravotní výsledky a informace o vrzích.
+                </p>
+              </div>
+            </article>
+
+            <!-- Další pes (volitelný) -->
+            <article class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
+              <div class="aspect-[4/3] bg-slate-200 flex items-center justify-center">
+                <span class="text-4xl">🐕</span>
+              </div>
+              <div class="p-4 space-y-1 text-sm">
+                <h3 class="font-semibold text-slate-900">Rodinný mazlíček</h3>
+                <p class="text-xs uppercase tracking-wide text-slate-500">rodinný pes</p>
+                <p class="text-slate-700">
+                  Pes, který se přímo neúčastní chovu, ale pomáhá se socializací štěňat.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- DYNAMICKÝ OBSAH (AJAX MÍSTO) -->
+      <section id="obsah" class="py-10 sm:py-14 md:py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-3">
+          <h2 class="text-2xl sm:text-3xl font-bold text-slate-900">Obsah</h2>
+          <p class="text-sm sm:text-base text-slate-700">
+            Zde může být dynamický obsah načítaný pomocí AJAXu (např. aktuality,
+            plánované vrhy, fotogalerie). Zatím je zde pouze statický text.
+          </p>
+
+          <!-- Kontejner pro budoucí AJAX obsah -->
+          <div id="ajax-content" class="mt-4 rounded-2xl border border-dashed border-slate-300 bg-white/70 p-4 text-sm text-slate-600">
+            <!-- TODO: sem budete vkládat obsah z AJAXu -->
+            <p>
+              Sem můžete později pomocí JavaScriptu načítat obsah z API nebo z externího souboru.
+              Například seznam vrhů, novinky nebo fotogalerii.
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- PATIČKA -->
+    <footer id="kontakt" class="bg-slate-900 text-slate-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
+        <div class="grid md:grid-cols-2 gap-6">
+          <div>
+            <h2 class="text-lg font-semibold mb-2">Kontakt</h2>
+            <dl class="space-y-2 text-sm">
+              <div>
+                <dt class="text-slate-400">Chovatelská stanice</dt>
+                <dd class="font-semibold">Zlatý čumáček</dd>
+              </div>
+              <div>
+                <dt class="text-slate-400">Telefon</dt>
+                <dd class="font-semibold">+420 123 456 789</dd>
+              </div>
+              <div>
+                <dt class="text-slate-400">E-mail</dt>
+                <dd class="font-semibold">info@zlaty-cumacek.cz</dd>
+              </div>
+              <div>
+                <dt class="text-slate-400">Lokalita</dt>
+                <dd class="font-semibold">např. Střední Čechy</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="text-sm text-slate-300">
+            <h2 class="text-lg font-semibold mb-2">Informace pro zájemce o štěně</h2>
+            <p class="mb-2">
+              Pokud máte zájem o štěně nebo se chcete na něco zeptat, ozvěte se nám prosím
+              telefonicky nebo e-mailem. Rádi vám povíme více o našem chovu, aktuálních
+              a plánovaných vrzích.
+            </p>
+            <p class="text-slate-400 text-xs">
+              Tento web slouží jako základní prezentace chovatelské stanice. Obsah
+              (fotografie, popisy vrhů, rodokmeny) můžete později doplnit dle potřeby.
+            </p>
+          </div>
+        </div>
+
+        <div class="border-t border-slate-700 pt-4 text-xs flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between text-slate-500">
+          <span>© <span id="year"></span> Chovatelská stanice Zlatý čumáček.</span>
+          <span>Jednoduchý one-page web v HTML5 &amp; Tailwind CSS.</span>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    // Aktuální rok v patičce
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
